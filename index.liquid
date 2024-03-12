@@ -1,7 +1,10 @@
 ---
 layout: layout.liquid
-title: 11ty Boilerplate
+title: Name Generator
 ---
 
-<h1>Yet Another 11ty <strong>Boilerplate</strong></h1>
-<img alt="pine" src="/images/pine.png" width="50" />
+<h1>Click to generate a name!</h1>
+<div x-data="{ names: ['Makayla', 'America', 'Charity', 'Katie', 'Katelyn', 'Amanda', 'Emily', 'Kaylee', 'Kenzie', 'Molly', 'Reagan'], index: 0}" class="ball">
+    <img alt="Button that says Click me!" src="/images/button.png" x-on:click="index = _.random(1,10)">
+    <h1 class="name" x-text="names[index]"></h1>
+</div>
